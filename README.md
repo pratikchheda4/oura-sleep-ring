@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 The Oura sleep ring records several metrics during sleep including amount of REM sleep, deep sleep, and total sleep time. It outputs a daily Sleep Score metric
 from 0-100, representing an overall indicator of how you slept (100 is the best).
 
@@ -10,6 +10,9 @@ In depth analysis can be found in the following notebooks:
 Can we reverse engineer Oura Sleep Ring's proprietary Sleep Score metric? Doing this successfully could unveil a powerful algorithm that could help people with or without this ring understand the most critical factors in their sleep, and provide a formula for a holistic metric that lets you know the quality of your sleep. 
 
 ## Data
+
+The data was sourced from my personal ring as well as anonymous friends
+
 The following data fields were included:
 * sleep_score                   (float64)
 * total_bedtime                 (float64)
