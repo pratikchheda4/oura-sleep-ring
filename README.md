@@ -32,9 +32,11 @@ The following data fields were included:
 * respiratory_rate              (float64)
 
 Data sample screenshot:
+
 ![data table](images/data_table_sample.png)
 
 Distribution of Sleep Scores:
+
 ![sleep dist](images/sleep_score_dist.png)
 
 
