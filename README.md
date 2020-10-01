@@ -46,11 +46,25 @@ My approach was to train supervised machine learning regression algorithms and a
 
 ## Results
 
-The test errors of the tuned algorithms were the following
- MAKE TABLE HERE
+Performance of the algorithms:
+| Name                         | Test Error (MSE) | R^2  |
+|------------------------------|------------------|------|
+| Linear Regression (1st poly) | 7.82             | .833 |
+| Linear Regression (2nd poly) | 9.29             | .812 |
+| Ridge Regression (2nd poly)  | 7.02             | .853 |
+| Lasso Regression (2nd poly)  | 6.91             | .846 |
+| Random Forest                | 9.22             | .777 |
 
-Since vanilla linear regression (with 1st degree polynomial features) was quite close, and didn’t involve confusing features to look at (e.g. x2^2 * x8), I will list the top 5 features and their weights:
-MAKE TABLE HERE OR INCLUDE SCREENSHOT
+In terms of test error, Lasso regression performed the best.
+The top 5 features and their weights:
+
+| Feature                                | Coefficient | Coefficient (absolute value) |
+|----------------------------------------|-------------|------------------------------|
+| total_sleep_time                       | 25.26       | 25.26                        |
+| sleep_latency                          | 12.14       | 12.14                        |
+| awake_time * lowest_resting_heart_rate | -10.30      | 10.30                        |
+| sleep_latency^2                        | -9.49       | 9.49                         |
+| rem_sleep_time                         | 7.56        | 7.56                         |
 
 The full analysis and weights of all the algorithms can be found in the following notebooks:
 * `sleep_data_linear_regression_ridge_lasso.ipynb`
@@ -61,8 +75,9 @@ The full analysis and weights of all the algorithms can be found in the followin
 * Due to a lack of data (~500 usable data points), the results of this analysis are less powerful.
 * I did not use other score metrics they provided such as 'rem_sleep_score' which is also not transparently calculated. Including features like this would defeat the purpose of the project.
 * Computation constraints did not allow me to do a wider randomized and grid parameter search.
+* The data only consists of 3 different peoples' data. It might not generalize well without a significant sample of the population.
 
 ### Improvements
 * Additional data would allow me to test more sophisticated algorithms like neural networks
 * Trying some boosting algorithms (i.e. gradient boosting, extreme gradient boosting)
-
+* Ensembling multiple models could help reduce variance and improve performance
