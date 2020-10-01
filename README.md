@@ -6,7 +6,7 @@ In depth analysis can be found in the following notebooks:
 * `sleep_data_linear_regression_ridge_lasso.ipynb`
 * `sleep_data_random_forest.ipynb`
 
-## Problem Summary (business question, expected output, motivation)
+## Problem Summary
 Can we reverse engineer Oura Sleep Ring's proprietary Sleep Score metric? Doing this successfully could unveil a powerful algorithm that could help people with or without this ring understand the most critical factors in their sleep, and provide a formula for a holistic metric that lets you know the quality of your sleep. 
 
 ## Data
